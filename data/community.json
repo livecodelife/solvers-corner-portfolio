@@ -1,0 +1,42 @@
+[
+  {
+    "id": "community-1",
+    "title": "GenAI Engineering Workshops",
+    "organization": "Internal Training Program",
+    "image": "/placeholder.svg?height=300&width=500",
+    "blurb": "Delivering hands-on AI workshops to 150+ engineers on MCP servers and AI agents",
+    "description": "Lead facilitator for comprehensive GenAI training programs, delivering hands-on workshops to 150+ engineers on internal MCP server usage and AI agent best practices. Focus on practical implementation, code review automation, and developer productivity improvements through AI tool adoption.",
+    "participants": "150+",
+    "externalLink": "https://solverscorner.com/workshops"
+  },
+  {
+    "id": "community-2",
+    "title": "Technical Evangelism",
+    "organization": "Engineering Leadership",
+    "image": "/placeholder.svg?height=300&width=500",
+    "blurb": "Defining North Star visions and spreading AI adoption across engineering teams",
+    "description": "Technical evangelist focused on driving GenAI adoption and defining strategic technical visions. Authored comprehensive documentation including 'Getting Started with Contract Testing' and onboarded 4 service teams to streamline HTTP and Kafka Pact contracts. Present technical strategies to engineering and product leadership.",
+    "teams_impacted": "10+",
+    "externalLink": "https://solverscorner.com/evangelism"
+  },
+  {
+    "id": "community-3",
+    "title": "Mentorship & Code Review",
+    "organization": "Engineering Teams",
+    "image": "/placeholder.svg?height=300&width=500",
+    "blurb": "Mentoring junior engineers and conducting technical interviews",
+    "description": "Active mentor for junior and mid-level engineers, providing high-level code reviews, technical guidance, and career development support. Conduct technical interviews and help shape engineering hiring practices. Focus on building strong engineering culture and knowledge sharing.",
+    "mentees": "20+",
+    "externalLink": "https://solverscorner.com/mentorship"
+  },
+  {
+    "id": "community-4",
+    "title": "Open Source Contributions",
+    "organization": "Developer Community",
+    "image": "/placeholder.svg?height=300&width=500",
+    "blurb": "Created WebRTC Node package with React components, ~21 downloads per month",
+    "description": "Developed and maintain a Node.js package exposing functions and React components for implementing WebRTC video capturing into web applications. Currently receives ~21 downloads per month. Contribute to various open source projects focused on web development and AI tooling.",
+    "downloads": "21/month",
+    "externalLink": "https://npmjs.com/package/webrtc-components"
+  }
+]

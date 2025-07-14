@@ -1,0 +1,42 @@
+[
+  {
+    "id": "newsletter-1",
+    "title": "GenAI Engineering Insights",
+    "publication": "The Solvers Corner",
+    "image": "/placeholder.svg?height=300&width=500",
+    "blurb": "Weekly insights on implementing GenAI and LLMs in production environments",
+    "description": "A comprehensive weekly newsletter covering practical GenAI implementation strategies, LLM integration patterns, and real-world case studies from enterprise environments. Features hands-on tutorials, performance optimization techniques, and lessons learned from deploying AI-powered solutions at scale.",
+    "subscribers": "2,500+",
+    "externalLink": "https://solverscorner.com/newsletter"
+  },
+  {
+    "id": "newsletter-2",
+    "title": "Cross-Functional Leadership",
+    "publication": "Engineering Leadership Weekly",
+    "image": "/placeholder.svg?height=300&width=500",
+    "blurb": "Strategies for leading technical programs across multiple teams and stakeholders",
+    "description": "Bi-weekly publication focused on cross-functional program leadership in tech organizations. Covers roadmap planning, risk management, stakeholder alignment, and data-driven decision making. Includes real examples from managing multi-million dollar technical initiatives.",
+    "subscribers": "1,800+",
+    "externalLink": "https://solverscorner.com/leadership"
+  },
+  {
+    "id": "newsletter-3",
+    "title": "Modern Web Architecture",
+    "publication": "Full Stack Focus",
+    "image": "/placeholder.svg?height=300&width=500",
+    "blurb": "Deep dives into Ruby on Rails, React, and modern web development patterns",
+    "description": "Monthly technical newsletter exploring modern web development with Ruby on Rails, React, and cloud-native technologies. Features architecture patterns, performance optimization, and migration strategies from legacy systems to modern stacks.",
+    "subscribers": "3,200+",
+    "externalLink": "https://solverscorner.com/webdev"
+  },
+  {
+    "id": "newsletter-4",
+    "title": "AI Tools & Automation",
+    "publication": "Developer Productivity",
+    "image": "/placeholder.svg?height=300&width=500",
+    "blurb": "Practical guides for integrating AI tools into development workflows",
+    "description": "Weekly newsletter focused on practical AI tool integration for developers. Covers code review automation, CI/CD enhancements, and developer productivity improvements through AI. Includes hands-on workshops and implementation guides.",
+    "subscribers": "4,100+",
+    "externalLink": "https://solverscorner.com/ai-tools"
+  }
+]

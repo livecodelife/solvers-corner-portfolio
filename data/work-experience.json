@@ -1,0 +1,42 @@
+[
+  {
+    "id": "work-1",
+    "title": "Senior Software Engineer",
+    "company": "Checkr, Inc.",
+    "image": "/placeholder.svg?height=300&width=500",
+    "blurb": "Leading GenAI adoption and cross-functional programs, unlocking $2M in revenue",
+    "description": "Currently driving GenAI technology adoption across engineering teams while leading critical cross-functional programs. Unlocked $2M in revenue by co-leading crucial time-sensitive efforts. Achieved 56% reduction in expensive customer processes through cross-functional collaboration. Led research, testing, and rollout of AI-powered merge request review agent, resulting in 82% reduction in approval time and 24% reduction in cycle time. Developing critical services handling ~2000 requests per minute and delivering hands-on AI workshops to 150+ engineers.",
+    "duration": "December 2021 - Present",
+    "externalLink": "https://checkr.com"
+  },
+  {
+    "id": "work-2",
+    "title": "Senior Consultant",
+    "company": "Object Partners, Inc.",
+    "image": "/placeholder.svg?height=300&width=500",
+    "blurb": "Managed multi-team delivery across Java/Spring and React teams for three client organizations",
+    "description": "Orchestrated Java/Spring and React development teams across three client organizations, breaking down complex requirements into sprint-based technical plans with clear milestones. Consulted directly with clients to determine project requirements, provided strategic technical guidance, and delivered architected solutions that met critical business objectives. Specialized in cross-team coordination and technical leadership.",
+    "duration": "August 2020 - December 2021",
+    "externalLink": "https://objectpartners.com"
+  },
+  {
+    "id": "work-3",
+    "title": "Senior Software Engineer",
+    "company": "Cognizant",
+    "image": "/placeholder.svg?height=300&width=500",
+    "blurb": "Developed scalable web applications using Java and Spring Boot for major trucking company",
+    "description": "Developed and maintained scalable web applications using Java and Spring Boot framework for a major trucking company's payroll system. Mentored junior engineers, provided high-level code reviews, and conducted technical interviews. Focused on building robust, enterprise-level solutions that could handle high-volume transaction processing.",
+    "duration": "April 2019 - August 2020",
+    "externalLink": "https://cognizant.com"
+  },
+  {
+    "id": "work-4",
+    "title": "Software Engineer",
+    "company": "Allstate",
+    "image": "/placeholder.svg?height=300&width=500",
+    "blurb": "Led full-stack development for insurance claims system as tech lead for team of 7 engineers",
+    "description": "Led development on a full-stack web application for insurance claims processing as tech lead for a team of 7 engineers. Architected and led an innovative image quality scoring system using WebRTC for capturing vehicle damage images. Developed a Node.js package with React components for WebRTC video capturing (currently ~21 downloads per month). Engineered the migration of legacy systems to modern email services and led GraphQL implementation for enhanced API functionality.",
+    "duration": "June 2017 - April 2019",
+    "externalLink": "https://allstate.com"
+  }
+]
