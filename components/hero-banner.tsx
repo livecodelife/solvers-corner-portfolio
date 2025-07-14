@@ -1,11 +1,19 @@
 "use client"
 
-import { useEffect, useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 import { Button } from "@/components/ui/button"
-import { Play, Info } from "lucide-react"
+import { Play, Info, VolumeX, Volume2 } from "lucide-react"
 
 export default function HeroBanner() {
   const videoRef = useRef<HTMLVideoElement>(null)
+  const [isMuted, setIsMuted] = useState(true)
+
+  const toggleMute = () => {
+    if (videoRef.current) {
+      videoRef.current.muted = !isMuted
+      setIsMuted(!isMuted)
+    }
+  }
 
   useEffect(() => {
     if (videoRef.current) {
@@ -15,13 +23,22 @@ export default function HeroBanner() {
 
   return (
     <div className="relative h-[70vh] w-full overflow-hidden">
-      <video ref={videoRef} className="absolute inset-0 h-full w-full object-cover" autoPlay muted loop playsInline>
-        <source src="/software-engineering-hero.mp4" type="video/mp4" />
+      <video ref={videoRef} className="absolute inset-0 h-full w-full object-cover" autoPlay muted={isMuted} loop playsInline>
+        <source src="banner.mp4" type="video/mp4" />
       </video>
 
       {/* Gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/30 to-transparent" />
       <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+
+      {/* Mute toggle button */}
+      <button
+        onClick={toggleMute}
+        className="absolute top-4 right-4 z-10 p-2 rounded-full bg-black/50 hover:bg-black/70 transition-colors"
+        aria-label={isMuted ? "Unmute video" : "Mute video"}
+      >
+        {isMuted ? <VolumeX className="h-6 w-6 text-white" /> : <Volume2 className="h-6 w-6 text-white" />}
+      </button>
 
       {/* Content */}
       <div className="absolute inset-0 flex items-center">
