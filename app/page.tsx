@@ -12,11 +12,13 @@ import newsletterData from "@/data/newsletter.json"
 import communityData from "@/data/community.json"
 import projectsData from "@/data/projects.json"
 
+import type { ContentItem } from "@/types/content"
+
 export default function Home() {
-  const [selectedItem, setSelectedItem] = useState<any>(null)
+  const [selectedItem, setSelectedItem] = useState<ContentItem | null>(null)
   const [showSplash, setShowSplash] = useState(true)
 
-  const handleItemClick = (item: any) => {
+  const handleItemClick = (item: ContentItem) => {
     setSelectedItem(item)
   }
 
@@ -46,7 +48,7 @@ export default function Home() {
         <ContentCarousel title="Projects" items={projectsData} onItemClick={handleItemClick} />
       </div>
 
-      {selectedItem && <ContentModal item={selectedItem} onClose={handleCloseModal} category={selectedItem.category} />}
+      {selectedItem && <ContentModal item={selectedItem} onClose={handleCloseModal} category={selectedItem.category || "General"} />}
     </div>
   )
 }

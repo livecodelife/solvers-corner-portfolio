@@ -49,6 +49,7 @@ export default function HeroBanner() {
         onClick={toggleMute}
         className="absolute top-4 right-4 z-10 p-2 rounded-full bg-black/50 hover:bg-black/70 transition-colors"
         aria-label={isMuted ? "Unmute video" : "Mute video"}
+        data-umami-event="video-mute-toggle"
       >
         {isMuted ? <VolumeX className="h-6 w-6 text-white" /> : <Volume2 className="h-6 w-6 text-white" />}
       </button>
@@ -64,7 +65,7 @@ export default function HeroBanner() {
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto">
               <a href="https://github.com/livecodelife" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
-                <Button size="lg" className="bg-white text-black hover:bg-gray-200 w-full sm:w-auto">
+                <Button size="lg" className="bg-white text-black hover:bg-gray-200 w-full sm:w-auto" data-umami-event="explore-work-click">
                   <Play className="mr-2 h-5 w-5" />
                   Explore My Work
                 </Button>
@@ -74,6 +75,7 @@ export default function HeroBanner() {
                 variant="outline"
                 className="border-gray-400 text-white hover:bg-white/10 bg-transparent w-full sm:w-auto"
                 onClick={handleAboutClick}
+                data-umami-event="about-me-click"
               >
                 <Info className="mr-2 h-5 w-5" />
                 About Me

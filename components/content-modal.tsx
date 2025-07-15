@@ -3,26 +3,14 @@
 import type React from "react"
 
 import { useEffect } from "react"
-import { X, Play, Plus, ThumbsUp, Volume2 } from "lucide-react"
+import { X, Play } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 
+import type { ContentItem } from "@/types/content"
+
 interface ContentModalProps {
-  item: {
-    id: number
-    title: string
-    subtitle?: string
-    company?: string
-    period?: string
-    image: string
-    description: string
-    fullDescription: string
-    technologies: string[]
-    achievements: string[]
-    externalLink: string
-    duration: string
-    type: string
-  }
+  item: ContentItem
   onClose: () => void
   category: string
 }
@@ -78,6 +66,7 @@ export default function ContentModal({ item, onClose, category }: ContentModalPr
             size="icon"
             className="absolute top-4 right-4 bg-[#181818] hover:bg-gray-700 text-white rounded-full"
             onClick={onClose}
+            data-umami-event="modal-close"
           >
             <X className="h-6 w-6" />
           </Button>
@@ -99,6 +88,7 @@ export default function ContentModal({ item, onClose, category }: ContentModalPr
                 size="lg"
                 className="bg-white text-black hover:bg-gray-200 font-semibold px-5"
                 onClick={handleExternalLink}
+                data-umami-event="external-link-click"
               >
                 <Play className="h-5 w-5" />
               </Button>

@@ -34,13 +34,13 @@ export default function AboutPage() {
           <h2 className="text-3xl font-bold mb-6 text-white">Background</h2>
           <div className="max-w-4xl">
             <p className="text-gray-300 text-lg leading-relaxed mb-4">
-              I'm a passionate software engineer who thrives at the intersection of cutting-edge technology and real-world problem solving. 
+              I&apos;m a passionate software engineer who thrives at the intersection of cutting-edge technology and real-world problem solving. 
               My journey began with a fascination for how code could transform ideas into impactful solutions, leading me to specialize 
               in GenAI integration, scalable architectures, and cross-functional team leadership.
             </p>
             <p className="text-gray-300 text-lg leading-relaxed">
-              Throughout my career, I've had the privilege of working with industry leaders like Checkr, Object Partners, Cognizant, 
-              and Allstate, where I've consistently delivered innovative solutions that drive measurable business impact. My approach 
+              Throughout my career, I&apos;ve had the privilege of working with industry leaders like Checkr, Object Partners, Cognizant, 
+              and Allstate, where I&apos;ve consistently delivered innovative solutions that drive measurable business impact. My approach 
               combines technical excellence with strategic thinking, ensuring that every line of code serves a larger purpose.
             </p>
           </div>
@@ -95,7 +95,7 @@ export default function AboutPage() {
               <ul className="text-gray-400 space-y-1">
                 <li>• Unlocked $2M in revenue through critical engineering leadership</li>
                 <li>• Achieved 56% reduction in customer process time</li>
-                <li>• Enahanced and maintained services handling ~2000 requests per minute</li>
+                <li>• Enhanced and maintained services handling ~2000 requests per minute</li>
               </ul>
             </div>
             
@@ -112,7 +112,7 @@ export default function AboutPage() {
               <p className="text-gray-400 mb-2">2019 - 2020</p>
               <p className="text-gray-300 mb-3">
                 Developed and maintained scalable web applications using Java and Spring Boot framework for a major
-trucking company's payroll system.
+trucking company&apos;s payroll system.
               </p>
             </div>
 
@@ -162,9 +162,9 @@ trucking company's payroll system.
 
         {/* Back to Home Button */}
         <div className="flex justify-center">
-          <Link href="/">
-            <Button 
-              size="lg" 
+          <Link href="/" data-umami-event="back-to-home-click">
+            <Button
+              size="lg"
               className="bg-white text-black hover:bg-gray-200"
             >
               <ArrowLeft className="mr-2 h-5 w-5" />

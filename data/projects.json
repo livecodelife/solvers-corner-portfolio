@@ -1,6 +1,24 @@
 [
   {
     "id": 1,
+    "title": "The Solver's Corner",
+    "subtitle": "Interactive carousel‑driven personal site",
+    "period": "2025",
+    "category": "Projects",
+    "image": "/personal-portfolio.png?height=400&width=600",
+    "description": "Sleek, Interactive, Cinematic",
+    "fullDescription": "Built a one‑page personal portfolio using AI‑powered tools and React. Features four swipeable carousels (Work Experience, Newsletter, Community, Projects), modal detail views with ‘Play’ links, and a looping B‑roll hero video. Deployed for free via v0.dev.",
+    "technologies": ["NextJS", "Tailwind CSS", "v0.dev"],
+    "achievements": [
+      "Zero‑cost deployment on v0.dev",
+      "Seamless Netflix‑style UX with responsive carousels",
+      "Dynamic video banner without using a backend"
+    ],
+    "externalLink": "https://solverscorner.com",
+    "type": "project"
+  },
+  {
+    "id": 2,
     "title": "Flip The Choice",
     "subtitle": "Fun app for making decisions",
     "period": "2025",
@@ -17,7 +35,7 @@
     "type": "project"
   },
   {
-    "id": 2,
+    "id": 3,
     "title": "WebRTC Quickstream",
     "subtitle": "A Node package for streamlining the use of WebRTC in React applications",
     "company": "npm.js",

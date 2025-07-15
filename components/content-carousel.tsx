@@ -5,10 +5,12 @@ import { ChevronLeft, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import ContentCard from "./content-card"
 
+import type { ContentItem } from "@/types/content"
+
 interface ContentCarouselProps {
   title: string
-  items: any[]
-  onItemClick: (item: any) => void
+  items: ContentItem[]
+  onItemClick: (item: ContentItem) => void
 }
 
 export default function ContentCarousel({ title, items, onItemClick }: ContentCarouselProps) {
@@ -35,6 +37,7 @@ export default function ContentCarousel({ title, items, onItemClick }: ContentCa
           size="icon"
           className="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black/70 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
           onClick={() => scroll("left")}
+          data-umami-event="carousel-scroll-left"
         >
           <ChevronLeft className="h-6 w-6" />
         </Button>
@@ -45,6 +48,7 @@ export default function ContentCarousel({ title, items, onItemClick }: ContentCa
           size="icon"
           className="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black/70 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
           onClick={() => scroll("right")}
+          data-umami-event="carousel-scroll-right"
         >
           <ChevronRight className="h-6 w-6" />
         </Button>
