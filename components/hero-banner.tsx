@@ -63,10 +63,12 @@ export default function HeroBanner() {
               cross-functional leadership, and scalable engineering solutions that drive real business impact.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto">
-              <Button size="lg" className="bg-white text-black hover:bg-gray-200 w-full sm:w-auto">
-                <Play className="mr-2 h-5 w-5" />
-                Explore My Work
-              </Button>
+              <a href="https://github.com/livecodelife" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+                <Button size="lg" className="bg-white text-black hover:bg-gray-200 w-full sm:w-auto">
+                  <Play className="mr-2 h-5 w-5" />
+                  Explore My Work
+                </Button>
+              </a>
               <Button
                 size="lg"
                 variant="outline"
