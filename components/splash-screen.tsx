@@ -12,7 +12,7 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
   useEffect(() => {
     const timer1 = setTimeout(() => {
       setAnimationPhase("collapse")
-    }, 1500)
+    }, 2000)
 
     const timer2 = setTimeout(() => {
       setAnimationPhase("rush")
@@ -36,14 +36,14 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
 
   return (
     <div
-      className={`fixed inset-0 bg-black z-50 flex items-center justify-center overflow-hidden transition-opacity duration-1000 ${
+      className={`fixed inset-0 bg-black z-50 flex items-center justify-center overflow-hidden transition-opacity duration-300 ${
         animationPhase === "fade" ? "opacity-0" : "opacity-100"
       }`}
     >
       <div className="relative flex items-center justify-center">
         {/* SOLVERS text */}
         <div
-          className={`text-red-600 font-bold text-4xl sm:text-6xl md:text-8xl lg:text-9xl tracking-wider transition-all duration-2000 ease-in-out ${
+          className={`text-red-600 font-bold text-4xl sm:text-6xl md:text-8xl lg:text-9xl tracking-wider transition-all duration-10000 ease-in-out ${
             animationPhase === "initial"
               ? "transform translate-x-0 scale-100 opacity-100"
               : "transform translate-x-[200px] scale-0 opacity-0"
@@ -57,7 +57,7 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
 
         {/* Space between SOLVERS and CORNER */}
         <div
-          className={`transition-all duration-2000 ease-in-out ${
+          className={`transition-all duration-10000 ease-in-out ${
             animationPhase === "collapse" ? "w-0" : "w-8 sm:w-12 md:w-16 lg:w-20"
           }`}
         ></div>
@@ -69,11 +69,11 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
               ? "transform translate-x-0 scale-[20] opacity-0"
               : animationPhase === "initial"
                 ? "transform translate-x-0 scale-100 opacity-100"
-                : "transform translate-x-0 scale-110 opacity-100"
+                : "transform translate-x-[-100px] scale-110 opacity-100"
           }`}
           style={{
             transformOrigin: "center center",
-            transitionDuration: animationPhase === "rush" ? "1000ms" : "2000ms",
+            transitionDuration: animationPhase === "rush" ? "250ms" : "500ms",
             transitionTimingFunction: animationPhase === "rush" ? "ease-in" : "ease-in-out",
           }}
         >
@@ -82,7 +82,7 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
 
         {/* ORNER text */}
         <div
-          className={`text-red-600 font-bold text-4xl sm:text-6xl md:text-8xl lg:text-9xl tracking-wider transition-all duration-2000 ease-in-out ${
+          className={`text-red-600 font-bold text-4xl sm:text-6xl md:text-8xl lg:text-9xl tracking-wider transition-all duration-10000 ease-in-out ${
             animationPhase === "initial"
               ? "transform translate-x-0 scale-100 opacity-100"
               : "transform translate-x-[-200px] scale-0 opacity-0"
@@ -101,19 +101,6 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
           }`}
         >
           <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 bg-red-600 rounded-full blur-3xl animate-pulse"></div>
-        </div>
-      </div>
-
-      {/* Loading indicator */}
-      <div
-        className={`absolute bottom-20 left-1/2 transform -translate-x-1/2 transition-opacity duration-500 ${
-          animationPhase === "collapse" && animationPhase !== "rush" ? "opacity-100" : "opacity-0"
-        }`}
-      >
-        <div className="flex space-x-1">
-          <div className="w-2 h-2 bg-red-600 rounded-full animate-bounce" style={{ animationDelay: "0ms" }}></div>
-          <div className="w-2 h-2 bg-red-600 rounded-full animate-bounce" style={{ animationDelay: "150ms" }}></div>
-          <div className="w-2 h-2 bg-red-600 rounded-full animate-bounce" style={{ animationDelay: "300ms" }}></div>
         </div>
       </div>
     </div>
