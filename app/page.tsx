@@ -46,7 +46,7 @@ export default function Home() {
         <ContentCarousel title="Projects" items={projectsData} onItemClick={handleItemClick} />
       </div>
 
-      {selectedItem && <ContentModal item={selectedItem} onClose={handleCloseModal} category="general" />}
+      {selectedItem && <ContentModal item={selectedItem} onClose={handleCloseModal} category={selectedItem.category} />}
     </div>
   )
 }

@@ -1,84 +1,86 @@
 [
   {
     "id": 1,
+    "category": "Career",
     "title": "Senior Software Engineer",
-    "subtitle": "GenAI & Platform Engineering",
+    "subtitle": "Staff‑Level CI Reliability & GenAI Integration",
     "company": "Checkr, Inc.",
     "period": "12/2021 - Present",
-    "image": "/placeholder.svg?height=400&width=600",
-    "description": "Leading GenAI adoption and cross-functional engineering initiatives",
-    "fullDescription": "Unlocked $2M in revenue by co-leading crucial time-sensitive efforts and stepping in for the lead engineer. Achieved 56% reduction in expensive and time-consuming customer processes by spearheading cross-functional collaboration. Led, researched, tested, and rolled out an AI-powered merge request review agent, partnering with engineering and DevOps teams to integrate it into the CI pipeline.",
+    "image": "/checkr.png?height=400&width=600",
+    "description": "Strategic, Innovative, Collaborative",
+    "fullDescription": "In a quest to modernize CI pipelines, I spearheaded the creation of an AI‑powered merge request review agent and forged alliances across engineering and DevOps. Balancing strategic vision with hands‑on development, I crafted training, documentation, and metrics that fueled a company‑wide shift toward GenAI‑driven workflows.",
     "technologies": ["Ruby on Rails", "React", "Docker", "Kubernetes", "GenAI", "LLMs"],
     "achievements": [
       "Unlocked $2M in revenue through critical engineering leadership",
       "Achieved 56% reduction in customer process time",
       "Implemented GenAI pilot with 82% reduction in approval time and 24% reduction in cycle time",
       "Developed services handling ~2000 requests per minute",
-      "Delivered hands-on workshops to 150+ engineers on AI agent best practices"
+      "Delivered hands‑on workshops to 150+ engineers on AI agent best practices",
+      "Defined & evangelized the team “North Star” vision to align EMs and PMs"
     ],
     "externalLink": "https://checkr.com",
-    "duration": "2+ years",
-    "type": "Full-time"
+    "duration": "3.5 years",
+    "type": "role"
   },
   {
     "id": 2,
+    "category": "Career",
     "title": "Senior Consultant",
-    "subtitle": "Multi-team Technical Leadership",
+    "subtitle": "Cross‑Functional Delivery & Strategy",
     "company": "Object Partners, Inc.",
     "period": "08/2020 - 12/2021",
-    "image": "/placeholder.svg?height=400&width=600",
-    "description": "Managed multi-team delivery across Java/Spring and React teams",
-    "fullDescription": "Managed multi-team delivery by orchestrating Java/Spring and React teams across three client organizations, breaking down requirements into sprint-based technical plans with clear milestones. Consulted and collaborated with clients to determine project requirements, provide technical guidance, and deliver or architect solutions that met their business objectives.",
-    "technologies": ["Java", "Spring Boot", "React", "JavaScript", "Agile"],
+    "image": "/objectpartners.png?height=400&width=600",
+    "description": "Adaptive, Insightful, Driven",
+    "fullDescription": "Acting as both strategist and facilitator, I guided three client organizations through complex Java/Spring and React projects. From requirements gathering to sprint execution, I crafted clear roadmaps and fostered collaboration that kept every stakeholder in sync.",
+    "technologies": ["Java", "Spring", "React", "Agile"],
     "achievements": [
-      "Successfully managed delivery across 3 client organizations",
-      "Orchestrated Java/Spring and React development teams",
-      "Delivered sprint-based technical solutions with clear milestones",
-      "Provided strategic technical guidance to enterprise clients"
+      "Delivered 5+ cross‑functional projects on time and within scope",
+      "Improved sprint predictability by 30% through clear milestone definition",
+      "Facilitated client workshops, boosting stakeholder engagement and alignment"
     ],
-    "externalLink": "https://objectpartners.com",
+    "externalLink": "https://www.objectpartners.com",
     "duration": "1.3 years",
-    "type": "Consulting"
+    "type": "role"
   },
   {
     "id": 3,
+    "category": "Career",
     "title": "Senior Software Engineer",
-    "subtitle": "Enterprise Web Applications",
+    "subtitle": "Java & Scalable Web Applications",
     "company": "Cognizant",
     "period": "04/2019 - 08/2020",
-    "image": "/placeholder.svg?height=400&width=600",
-    "description": "Developed scalable web applications for major trucking company payroll systems",
-    "fullDescription": "Developed and maintained scalable web applications using Java and Spring Boot framework for a major trucking company's payroll system. Mentored junior engineers, provided high-level code review, and conducted technical interviews to build strong engineering teams.",
-    "technologies": ["Java", "Spring Boot", "Microservices", "REST APIs"],
+    "image": "/cognizant.png?height=400&width=600",
+    "description": "Reliable, High‑Performance, Mentorship‑Focused",
+    "fullDescription": "On a mission to keep mission‑critical payroll systems running flawlessly, I designed and optimized high‑throughput Spring Boot services. Along the way, I mentored new engineers and shared best practices to elevate the entire team’s performance.",
+    "technologies": ["Java", "Spring Boot", "SQL"],
     "achievements": [
-      "Built scalable payroll systems for major trucking company",
-      "Mentored junior engineers and conducted technical interviews",
-      "Provided high-level code review and architectural guidance",
-      "Maintained enterprise-grade web applications"
+      "Sustained 99.9% uptime on critical payroll services",
+      "Mentored 4 junior engineers, reducing onboarding time by 25%",
+      "Led technical interview panels, contributing to a 20% improvement in hire quality"
     ],
-    "externalLink": "https://cognizant.com",
+    "externalLink": "https://www.cognizant.com",
     "duration": "1.3 years",
-    "type": "Full-time"
+    "type": "role"
   },
   {
     "id": 4,
+    "category": "Career",
     "title": "Software Engineer",
-    "subtitle": "Full-Stack Development & Team Leadership",
+    "subtitle": "Full‑Stack Insurance Solutions",
     "company": "Allstate",
     "period": "06/2017 - 04/2019",
-    "image": "/placeholder.svg?height=400&width=600",
-    "description": "Led development on full-stack insurance claims application as tech lead",
-    "fullDescription": "Led development on a full-stack web application for insurance claims as tech lead for a team of 7 engineers. Architected and led an image quality scoring system for WebRTC vehicle damage capture. Developed a Node package exposing WebRTC functions and React components, currently with ~21 downloads per month. Engineered migration of legacy system to modern email service and led GraphQL implementation.",
-    "technologies": ["JavaScript", "React", "Node.js", "WebRTC", "GraphQL"],
+    "image": "/allstate.png?height=400&width=600",
+    "description": "Innovative, Reliable, User‑Centric",
+    "fullDescription": "As the tech lead for a seven‑engineer team, I architected and built a claims processing platform complete with real‑time image scoring and video capture. I also navigated legacy migrations and introduced GraphQL to streamline APIs, all while ensuring top‑tier reliability.",
+    "technologies": ["Node.js", "React", "WebRTC", "GraphQL", "Java"],
     "achievements": [
-      "Tech lead for team of 7 engineers on insurance claims application",
-      "Architected image quality scoring system for vehicle damage assessment",
-      "Created open-source WebRTC Node package with ongoing usage",
-      "Led legacy system migration to modern email service",
-      "Implemented GraphQL for enhanced API functionality"
+      "Delivered claims platform ahead of schedule, improving cycle time by 20%",
+      "Designed image scoring system, increasing damage assessment accuracy by 35%",
+      "Published Node.js package with 21+ monthly downloads",
+      "Led GraphQL rollout, reducing API payload size by 50%"
     ],
-    "externalLink": "https://allstate.com",
+    "externalLink": "https://www.allstate.com",
     "duration": "1.8 years",
-    "type": "Full-time"
+    "type": "role"
   }
 ]

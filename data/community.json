@@ -1,82 +1,62 @@
 [
   {
     "id": 1,
-    "title": "AI Engineering Workshop Series",
-    "subtitle": "Hands-on training for 150+ engineers",
-    "company": "Checkr Engineering",
-    "period": "2024",
-    "image": "/placeholder.svg?height=400&width=600",
-    "description": "Comprehensive workshop series on AI agent development and best practices",
-    "fullDescription": "Developed and delivered hands-on workshops to 150+ engineers on internal MCP server usage and AI agent best practices. The series covered practical implementation of AI-powered development tools, integration with CI/CD pipelines, and establishing best practices for AI tool adoption across engineering teams.",
-    "technologies": ["AI Agents", "MCP Servers", "CI/CD", "Developer Tools", "Training"],
-    "achievements": [
-      "Trained 150+ engineers across multiple teams",
-      "Created comprehensive curriculum for AI tool adoption",
-      "Established best practices for AI agent development",
-      "Improved team productivity through AI tool education"
-    ],
-    "externalLink": "https://checkr.com/engineering",
-    "duration": "6 months",
-    "type": "Workshop"
+    "category": "Community",
+    "title": "Turing School Mentor",
+    "subtitle": "New Grad Mentorship & Career Guidance",
+    "period": "2017 - Present",
+    "image": "/turing.png?height=400&width=600",
+    "description": "Encouraging, Knowledgeable, Impactful",
+    "fullDescription": "Mentor new graduates from Turing School of Software & Design, offering guidance on technical skills, career development, and industry best practices. Help cohorts transition seamlessly into professional engineering roles.",
+    "externalLink": "https://www.linkedin.com/school/turingschool/",
+    "type": "Community"
   },
   {
     "id": 2,
-    "title": "Contract Testing Documentation",
-    "subtitle": "Onboarding 4 service teams to Pact contracts",
-    "company": "Checkr Engineering",
-    "period": "2023",
-    "image": "/placeholder.svg?height=400&width=600",
-    "description": "Authored comprehensive developer scripts and documentation for contract testing",
-    "fullDescription": "Authored 'Getting Started with Contract Testing' developer scripts and comprehensive documentation, successfully onboarding 4 service teams to streamline HTTP and Kafka Pact contracts. Created templates, best practices, and troubleshooting guides that became the standard for contract testing across the organization.",
-    "technologies": ["Pact", "Contract Testing", "HTTP", "Kafka", "Documentation", "Developer Experience"],
-    "achievements": [
-      "Onboarded 4 service teams to contract testing",
-      "Created comprehensive documentation and scripts",
-      "Established organization-wide testing standards",
-      "Improved service integration reliability"
-    ],
-    "externalLink": "https://docs.checkr.com/contract-testing",
-    "duration": "3 months",
-    "type": "Documentation"
+    "category": "Community",
+    "title": "Substack Author",
+    "subtitle": "In‑Depth AI & Engineering Insights",
+    "period": "2025",
+    "image": "/substack.png?height=400&width=600",
+    "description": "Thoughtful, Analytical, Forward‑Thinking",
+    "fullDescription": "Publish a bi‑weekly newsletter on GenAI trends, best practices, and industry analysis. Grew subscriber base to 1K+ through deep‑dive articles and practical implementation guides.",
+    "externalLink": "https://substack.com/@livecodelife",
+    "type": "Community"
   },
   {
     "id": 3,
-    "title": "Open Source WebRTC Package",
-    "subtitle": "React components for video capture (~21 downloads/month)",
-    "company": "Open Source Community",
-    "period": "2018 - Present",
-    "image": "/placeholder.svg?height=400&width=600",
-    "description": "Node package exposing WebRTC functions and React components for web applications",
-    "fullDescription": "Developed a Node package exposing functions and React components for implementing WebRTC video capturing into web applications. Originally created for vehicle damage assessment at Allstate, the package has been maintained as open source and continues to receive ~21 downloads per month from the developer community.",
-    "technologies": ["WebRTC", "React", "Node.js", "JavaScript", "Open Source"],
-    "achievements": [
-      "Maintained open source package for 6+ years",
-      "Consistent monthly downloads from developer community",
-      "Used in production for vehicle damage assessment",
-      "Contributed to WebRTC adoption in web applications"
-    ],
-    "externalLink": "https://npmjs.com/package/webrtc-capture",
-    "duration": "6+ years",
-    "type": "Open Source"
+    "category": "Community",
+    "title": "Dev.to Contributor",
+    "subtitle": "Technical Blogging & Community Engagement",
+    "period": "2025",
+    "image": "/devto.png?height=400&width=600",
+    "description": "Insightful, Engaging, Resourceful",
+    "fullDescription": "Authored 30+ technical articles on Ruby, JavaScript, and GenAI best practices. Grew readership to 5K+ monthly readers by providing hands‑on tutorials, code snippets, and real‑world case studies.",
+    "externalLink": "https://dev.to/livecodelife",
+    "type": "Community"
   },
   {
     "id": 4,
-    "title": "Technical Mentorship Program",
-    "subtitle": "Mentoring junior engineers and conducting technical interviews",
-    "company": "Multiple Organizations",
+    "category": "Community",
+    "title": "Reddit Contributor",
+    "subtitle": "Community Building & Support",
     "period": "2019 - Present",
-    "image": "/placeholder.svg?height=400&width=600",
-    "description": "Ongoing mentorship and technical interview contributions across multiple companies",
-    "fullDescription": "Actively mentored junior engineers throughout career, providing guidance on technical skills, career development, and engineering best practices. Conducted numerous technical interviews to help build strong engineering teams. Focused on creating inclusive environments and helping early-career developers grow into senior contributors.",
-    "technologies": ["Mentorship", "Technical Interviews", "Career Development", "Engineering Leadership"],
-    "achievements": [
-      "Mentored 20+ junior engineers across multiple companies",
-      "Conducted 100+ technical interviews",
-      "Helped junior developers advance to senior roles",
-      "Contributed to building diverse engineering teams"
-    ],
-    "externalLink": "https://linkedin.com/in/calebcowen",
-    "duration": "5+ years",
-    "type": "Mentorship"
+    "image": "/reddit.png?height=400&width=600",
+    "description": "Supportive, Patient, Knowledgeable",
+    "fullDescription": "Moderate and nurture a 10K+ member subreddit focused on software engineering and AI. Facilitate discussions, answer technical questions, and enforce community guidelines to foster a respectful learning environment.",
+    "externalLink": "https://reddit.com/u/livecodelife",
+    "type": "Community"
+  },
+  {
+    "id": 5,
+    "category": "Community",
+    "title": "Coder Legion Contributor",
+    "subtitle": "Technical Blogging & Community Engagement",
+    "period": "2025",
+    "image": "/coderlegion.png?height=400&width=600",
+    "description": "Collaborative, Innovative, Supportive",
+    "fullDescription": "Active member of Coder Legion, contributing to open source projects, participating in bi‑weekly code reviews, and organizing virtual hackathons to solve real‑world problems alongside global peers.",
+    "externalLink": "https://coderlegion.com/user/livecodelife",
+    "type": "Community"
   }
 ]

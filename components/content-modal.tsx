@@ -84,12 +84,9 @@ export default function ContentModal({ item, onClose, category }: ContentModalPr
 
           {/* Netflix logo and content type */}
           <div className="absolute top-4 left-4 flex items-center space-x-2">
-            <div className="w-6 h-6 bg-[#E50914] rounded flex items-center justify-center">
-              <span className="text-white font-bold text-xs">C</span>
+            <div className="w-10 h-10 bg-[#E50914] rounded flex items-center justify-center">
+              <span className="text-white font-bold text-lg">C</span>
             </div>
-            <span className="text-white text-sm font-semibold tracking-wider">
-              {item.type?.toUpperCase() || category.toUpperCase()}
-            </span>
           </div>
 
           {/* Bottom content overlay */}
@@ -100,32 +97,10 @@ export default function ContentModal({ item, onClose, category }: ContentModalPr
             <div className="flex items-center space-x-4 mb-4">
               <Button
                 size="lg"
-                className="bg-white text-black hover:bg-gray-200 font-semibold px-8"
+                className="bg-white text-black hover:bg-gray-200 font-semibold px-5"
                 onClick={handleExternalLink}
               >
-                <Play className="mr-2 h-5 w-5" />
-                View Details
-              </Button>
-              <Button
-                variant="ghost"
-                size="icon"
-                className="bg-gray-600/50 hover:bg-gray-600/70 text-white rounded-full"
-              >
-                <Plus className="h-6 w-6" />
-              </Button>
-              <Button
-                variant="ghost"
-                size="icon"
-                className="bg-gray-600/50 hover:bg-gray-600/70 text-white rounded-full"
-              >
-                <ThumbsUp className="h-6 w-6" />
-              </Button>
-              <Button
-                variant="ghost"
-                size="icon"
-                className="bg-gray-600/50 hover:bg-gray-600/70 text-white rounded-full"
-              >
-                <Volume2 className="h-6 w-6" />
+                <Play className="h-5 w-5" />
               </Button>
             </div>
           </div>
@@ -188,7 +163,7 @@ export default function ContentModal({ item, onClose, category }: ContentModalPr
 
               {item.period && (
                 <div>
-                  <span className="text-gray-400 text-sm">Period: </span>
+                  <span className="text-gray-400 text-sm">Date: </span>
                   <span className="text-white">{item.period}</span>
                 </div>
               )}
@@ -199,8 +174,8 @@ export default function ContentModal({ item, onClose, category }: ContentModalPr
               </div>
 
               <div>
-                <span className="text-gray-400 text-sm">This project is: </span>
-                <span className="text-white">Professional, Innovative</span>
+                <span className="text-gray-400 text-sm">This {item.type} is: </span>
+                <span className="text-white">{item.description}</span>
               </div>
             </div>
           </div>

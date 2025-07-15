@@ -1,62 +1,44 @@
 [
   {
     "id": 1,
-    "title": "GenAI in Enterprise: A Practical Guide",
-    "subtitle": "Weekly insights on AI adoption in software engineering",
+    "title": "Roo Code Workflow",
+    "subtitle": "Build a Free, Always-On LLM-Powered Dev Assistant",
     "company": "The Solvers Corner",
-    "period": "2024 - Present",
-    "image": "/placeholder.svg?height=400&width=600",
-    "description": "Deep dives into practical GenAI implementation strategies for engineering teams",
-    "fullDescription": "A weekly newsletter exploring the practical implementation of Generative AI in enterprise software development. Covers real-world case studies, implementation strategies, and lessons learned from deploying AI-powered tools in production environments. Based on hands-on experience implementing AI code review agents and training 150+ engineers.",
-    "technologies": ["GenAI", "LLMs", "Code Review", "CI/CD", "DevOps"],
+    "period": "June 26, 2025",
+    "category": "Publication",
+    "image": "/roo.jpg?height=400&width=600",
+    "description": "Comprehensive, Actionable",
+    "fullDescription": "Whether you’re prototyping a SaaS MVP, experimenting with AI-driven features, or just love playing with LLMs, this guide will get you up and running in under 20 minutes.",
+    "technologies": ["GenAI", "LLMs", "Code Assistant"],
     "achievements": [
-      "Weekly readership of 500+ software engineers",
-      "Featured case studies from Fortune 500 implementations",
-      "Practical guides for AI tool adoption",
-      "Community discussions on AI best practices"
+      "548 Impressions",
+      "300 Views",
+      "175 Members Reached",
+      "23 Email Sends",
+      "48% Open Rate"
     ],
-    "externalLink": "https://newsletter.solverscorner.com",
+    "externalLink": "https://www.linkedin.com/pulse/roo-code-workflow-build-free-always-on-llm-powered-dev-caleb-cowen-c3shc",
     "duration": "Ongoing",
-    "type": "Newsletter"
+    "type": "article"
   },
   {
     "id": 2,
-    "title": "Cross-Functional Leadership Insights",
-    "subtitle": "Bridging technical and business objectives",
+    "title": "How I Supercharged My Workflow with Git Worktrees",
+    "subtitle": "",
     "company": "The Solvers Corner",
-    "period": "2023 - Present",
-    "image": "/placeholder.svg?height=400&width=600",
-    "description": "Monthly insights on leading technical initiatives across organizational boundaries",
-    "fullDescription": "Monthly publication focusing on the challenges and strategies of leading technical initiatives that span multiple teams and departments. Covers stakeholder management, technical communication, and aligning engineering efforts with business objectives. Drawing from experience managing multi-million dollar technical programs.",
+    "period": "June 21, 2025",
+    "category": "Publication",
+    "image": "/worktrees.jpg?height=400&width=600",
+    "description": "Practical, Insightful",
+    "fullDescription": "I share how discovering Git worktrees completely transformed the way I work across multiple branches. Especially when using AI coding tools like Cursor or Claude",
     "technologies": ["Leadership", "Program Management", "Stakeholder Management", "Technical Communication"],
     "achievements": [
-      "Monthly readership of 300+ technical leaders",
-      "Case studies from $2M+ revenue initiatives",
-      "Frameworks for cross-functional collaboration",
-      "Templates for technical program management"
+      "1,091 Impressions",
+      "799 Views",
+      "326 Members Reached"
     ],
-    "externalLink": "https://leadership.solverscorner.com",
+    "externalLink": "https://www.linkedin.com/pulse/how-i-supercharged-my-workflow-git-worktrees-caleb-cowen-eu04c",
     "duration": "Ongoing",
-    "type": "Newsletter"
-  },
-  {
-    "id": 3,
-    "title": "Modern Web Architecture Patterns",
-    "subtitle": "Scalable solutions for high-traffic applications",
-    "company": "The Solvers Corner",
-    "period": "2022 - Present",
-    "image": "/placeholder.svg?height=400&width=600",
-    "description": "Technical deep-dives into building systems that handle thousands of requests per minute",
-    "fullDescription": "Bi-weekly technical publication exploring modern web architecture patterns, focusing on scalability, reliability, and maintainability. Covers microservices, containerization, and cloud-native patterns. Based on experience building systems handling ~2000 requests per minute and managing high-availability services.",
-    "technologies": ["Microservices", "Docker", "Kubernetes", "Ruby on Rails", "React", "Cloud Architecture"],
-    "achievements": [
-      "Bi-weekly readership of 800+ developers",
-      "Architecture patterns for high-traffic systems",
-      "Performance optimization case studies",
-      "Cloud-native deployment strategies"
-    ],
-    "externalLink": "https://architecture.solverscorner.com",
-    "duration": "Ongoing",
-    "type": "Newsletter"
+    "type": "article"
   }
 ]
