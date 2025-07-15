@@ -41,7 +41,7 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
       <div className="relative flex items-center justify-center">
         {/* SOLVERS text */}
         <div
-          className={`text-red-600 font-bebas-neue text-4xl sm:text-6xl md:text-8xl lg:text-9xl tracking-wider transition-all duration-10000 ease-in-out ${
+          className={`text-red-600 font-futura text-4xl sm:text-6xl md:text-8xl lg:text-9xl tracking-wider transition-all duration-10000 ease-in-out ${
             animationPhase === "initial"
               ? "transform translate-x-0 scale-100 opacity-100"
               : "transform translate-x-[200px] scale-0 opacity-0"
@@ -62,12 +62,14 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
 
         {/* C letter that the others collapse into and centers */}
         <div
-          className={`text-red-600 font-bebas-neue text-4xl sm:text-6xl md:text-8xl lg:text-9xl tracking-wider transition-all duration-2000 ease-in-out ${
+          className={`text-red-600 font-futura text-4xl sm:text-6xl md:text-8xl lg:text-9xl tracking-wider transition-all duration-2000 ease-in-out ${
             animationPhase === "rush"
               ? "transform translate-x-0 scale-[20] opacity-0"
-              : animationPhase === "initial"
-                ? "transform translate-x-0 scale-100 opacity-100"
-                : "transform translate-x-[-100px] scale-110 opacity-100"
+              : animationPhase === "fade"
+                ? "transform translate-x-0 scale-100 opacity-0"
+                : animationPhase === "initial"
+                  ? "transform translate-x-0 scale-100 opacity-100"
+                  : "transform translate-x-[-100px] scale-110 opacity-100"
           }`}
           style={{
             transformOrigin: "center center",
@@ -80,7 +82,7 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
 
         {/* ORNER text */}
         <div
-          className={`text-red-600 font-bebas-neue text-4xl sm:text-6xl md:text-8xl lg:text-9xl tracking-wider transition-all duration-10000 ease-in-out ${
+          className={`text-red-600 font-futura text-4xl sm:text-6xl md:text-8xl lg:text-9xl tracking-wider transition-all duration-10000 ease-in-out ${
             animationPhase === "initial"
               ? "transform translate-x-0 scale-100 opacity-100"
               : "transform translate-x-[-200px] scale-0 opacity-0"
