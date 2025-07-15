@@ -1,18 +1,24 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
+import { useRouter } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Play, Info, VolumeX, Volume2 } from "lucide-react"
 
 export default function HeroBanner() {
   const videoRef = useRef<HTMLVideoElement>(null)
   const [isMuted, setIsMuted] = useState(true)
+  const router = useRouter()
 
   const toggleMute = () => {
     if (videoRef.current) {
       videoRef.current.muted = !isMuted
       setIsMuted(!isMuted)
     }
+  }
+
+  const handleAboutClick = () => {
+    router.push('/about')
   }
 
   useEffect(() => {
@@ -65,6 +71,7 @@ export default function HeroBanner() {
                 size="lg"
                 variant="outline"
                 className="border-gray-400 text-white hover:bg-white/10 bg-transparent w-full sm:w-auto"
+                onClick={handleAboutClick}
               >
                 <Info className="mr-2 h-5 w-5" />
                 About Me
