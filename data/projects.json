@@ -1,42 +1,82 @@
 [
   {
-    "id": "project-1",
+    "id": 1,
     "title": "AI-Powered Code Review Agent",
-    "category": "GenAI & DevOps",
-    "image": "/placeholder.svg?height=300&width=500",
-    "blurb": "Led research and rollout of AI merge request review agent with 82% time reduction",
-    "description": "Led the complete lifecycle of an AI-powered merge request review agent, from research and testing to production rollout. Partnered cross-functionally with engineering and DevOps teams to integrate the solution into the CI pipeline. Achieved remarkable results with 82% reduction in time to approve and 24% reduction in cycle time, significantly improving developer productivity.",
-    "tech": "GenAI, CI/CD, DevOps, Ruby on Rails",
-    "externalLink": "https://solverscorner.com/ai-code-review"
+    "subtitle": "82% reduction in approval time, 24% reduction in cycle time",
+    "company": "Checkr, Inc.",
+    "period": "2024",
+    "image": "/placeholder.svg?height=400&width=600",
+    "description": "Led research, testing, and rollout of AI-powered merge request review system",
+    "fullDescription": "Led the complete lifecycle of implementing an AI-powered merge request review agent, from initial research through production deployment. Partnered cross-functionally with engineering and DevOps teams to integrate the system into the CI pipeline. The implementation resulted in an 82% reduction in time to approve and a 24% reduction in overall cycle time, significantly improving developer productivity.",
+    "technologies": ["AI/ML", "CI/CD", "DevOps", "Code Review", "Automation"],
+    "achievements": [
+      "82% reduction in merge request approval time",
+      "24% reduction in overall development cycle time",
+      "Seamless integration with existing CI pipeline",
+      "Cross-functional collaboration with engineering and DevOps"
+    ],
+    "externalLink": "https://checkr.com/engineering/ai-code-review",
+    "duration": "6 months",
+    "type": "AI/ML"
   },
   {
-    "id": "project-2",
-    "title": "High-Volume Service Architecture",
-    "category": "Backend Systems",
-    "image": "/placeholder.svg?height=300&width=500",
-    "blurb": "Developed critical services handling ~2000 requests per minute",
-    "description": "Architected and developed mission-critical backend services capable of handling ~2000 requests per minute with high reliability and low latency. Implemented robust error handling, monitoring, and scaling strategies to ensure 99.9% uptime. Used modern containerization and orchestration technologies for deployment.",
-    "tech": "Ruby on Rails, Docker, Kubernetes, Microservices",
-    "externalLink": "https://solverscorner.com/high-volume-services"
+    "id": 2,
+    "title": "High-Volume Request Processing System",
+    "subtitle": "Critical services handling ~2000 requests per minute",
+    "company": "Checkr, Inc.",
+    "period": "2022-2024",
+    "image": "/placeholder.svg?height=400&width=600",
+    "description": "Developed and maintained critical services for high-traffic applications",
+    "fullDescription": "Developed and maintained critical services handling approximately 2000 requests per minute, ensuring high availability and performance for mission-critical applications. Implemented robust monitoring, error handling, and scaling strategies to maintain service reliability under heavy load.",
+    "technologies": ["Ruby on Rails", "Microservices", "Load Balancing", "Monitoring", "Performance Optimization"],
+    "achievements": [
+      "Maintained 99.9% uptime for critical services",
+      "Handled ~2000 requests per minute consistently",
+      "Implemented comprehensive monitoring and alerting",
+      "Optimized performance for high-traffic scenarios"
+    ],
+    "externalLink": "https://checkr.com/platform",
+    "duration": "2 years",
+    "type": "Backend"
   },
   {
-    "id": "project-3",
-    "title": "WebRTC Image Quality System",
-    "category": "Computer Vision & WebRTC",
-    "image": "/placeholder.svg?height=300&width=500",
-    "blurb": "Architected image quality scoring system for vehicle damage assessment",
-    "description": "Architected and led development of an innovative image quality scoring system integrated with WebRTC for capturing high-quality vehicle damage images. Created a reusable Node.js package with React components for WebRTC video capturing, currently used by multiple applications and receiving ~21 downloads per month.",
-    "tech": "WebRTC, Computer Vision, Node.js, React",
-    "externalLink": "https://npmjs.com/package/webrtc-components"
+    "id": 3,
+    "title": "WebRTC Image Quality Scoring System",
+    "subtitle": "Vehicle damage assessment with real-time image analysis",
+    "company": "Allstate",
+    "period": "2018-2019",
+    "image": "/placeholder.svg?height=400&width=600",
+    "description": "Architected and led development of image quality scoring for vehicle damage capture",
+    "fullDescription": "Architected and led the development of an innovative image quality scoring system used in conjunction with WebRTC for capturing vehicle damage images. The system provided real-time feedback to users about image quality, ensuring high-quality data collection for insurance claims processing. This project significantly improved the accuracy and efficiency of damage assessment workflows.",
+    "technologies": ["WebRTC", "Image Processing", "JavaScript", "Real-time Systems", "Computer Vision"],
+    "achievements": [
+      "Real-time image quality assessment for insurance claims",
+      "Improved accuracy of vehicle damage documentation",
+      "Seamless integration with WebRTC video capture",
+      "Enhanced user experience with immediate feedback"
+    ],
+    "externalLink": "https://allstate.com/claims",
+    "duration": "8 months",
+    "type": "Frontend"
   },
   {
-    "id": "project-4",
-    "title": "Legacy System Migration",
-    "category": "System Architecture",
-    "image": "/placeholder.svg?height=300&width=500",
-    "blurb": "Engineered migration from legacy systems to modern email service with GraphQL",
-    "description": "Led the complex migration of legacy email systems to modern, scalable architecture. Implemented GraphQL to enhance API functionality and improve developer experience. Managed the transition without service interruption while improving performance and maintainability. Included comprehensive documentation and team training.",
-    "tech": "GraphQL, System Migration, Java/Spring, React",
-    "externalLink": "https://solverscorner.com/legacy-migration"
+    "id": 4,
+    "title": "Legacy System Migration & GraphQL Implementation",
+    "subtitle": "Modern email service with enhanced API functionality",
+    "company": "Allstate",
+    "period": "2017-2018",
+    "image": "/placeholder.svg?height=400&width=600",
+    "description": "Engineered migration from legacy system to modern email service with GraphQL",
+    "fullDescription": "Engineered the complete migration of a legacy email system to a modern, scalable email service. Led the implementation of GraphQL to enhance API functionality, providing more flexible and efficient data querying capabilities. The project improved system maintainability, performance, and developer experience while maintaining backward compatibility during the transition.",
+    "technologies": ["GraphQL", "System Migration", "Email Services", "API Design", "Legacy Modernization"],
+    "achievements": [
+      "Successfully migrated legacy email system without downtime",
+      "Implemented GraphQL for enhanced API functionality",
+      "Improved system performance and maintainability",
+      "Maintained backward compatibility during transition"
+    ],
+    "externalLink": "https://allstate.com/platform",
+    "duration": "10 months",
+    "type": "Full-stack"
   }
 ]

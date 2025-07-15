@@ -1,207 +1,211 @@
 "use client"
 
+import type React from "react"
+
+import { useEffect } from "react"
 import { X, Play, Plus, ThumbsUp, Volume2 } from "lucide-react"
-import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { Dialog, DialogContent } from "@/components/ui/dialog"
-import { Badge } from "@/components/ui/badge"
+import Image from "next/image"
 
 interface ContentModalProps {
-  isOpen: boolean
+  item: {
+    id: number
+    title: string
+    subtitle?: string
+    company?: string
+    period?: string
+    image: string
+    description: string
+    fullDescription: string
+    technologies: string[]
+    achievements: string[]
+    externalLink: string
+    duration: string
+    type: string
+  }
   onClose: () => void
-  item: any
+  category: string
 }
 
-export default function ContentModal({ isOpen, onClose, item }: ContentModalProps) {
-  if (!item) return null
+export default function ContentModal({ item, onClose, category }: ContentModalProps) {
+  useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        onClose()
+      }
+    }
 
-  const handlePlayClick = () => {
-    if (item.externalLink) {
-      window.open(item.externalLink, "_blank")
+    document.addEventListener("keydown", handleEscape)
+    document.body.style.overflow = "hidden"
+
+    return () => {
+      document.removeEventListener("keydown", handleEscape)
+      document.body.style.overflow = "unset"
+    }
+  }, [onClose])
+
+  const handleBackdropClick = (e: React.MouseEvent) => {
+    if (e.target === e.currentTarget) {
+      onClose()
     }
   }
 
-  const getYearFromDuration = (duration: string) => {
-    if (duration?.includes("Present")) return "2024"
-    if (duration?.includes("-")) return duration.split("-")[1].trim()
-    return "2024"
-  }
-
-  const getContentType = () => {
-    if (item.company) return "EXPERIENCE"
-    if (item.publication) return "NEWSLETTER"
-    if (item.organization) return "COMMUNITY"
-    if (item.category) return "PROJECT"
-    return "CONTENT"
+  const handleExternalLink = () => {
+    if (item.externalLink) {
+      window.open(item.externalLink, "_blank", "noopener,noreferrer")
+    }
   }
 
   return (
-    <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-4xl bg-[#181818] border-none text-white p-0 overflow-hidden rounded-lg">
-        <div className="relative">
+    <div className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4" onClick={handleBackdropClick}>
+      <div className="bg-[#181818] rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+        {/* Header with video/image */}
+        <div className="relative aspect-video">
+          <Image
+            src={item.image || "/placeholder.svg"}
+            alt={item.title}
+            fill
+            className="object-cover rounded-t-lg"
+            sizes="(max-width: 768px) 100vw, 80vw"
+          />
+
+          {/* Gradient overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-[#181818] via-transparent to-transparent" />
+
           {/* Close button */}
           <Button
             variant="ghost"
             size="icon"
-            className="absolute top-4 right-4 z-20 bg-[#181818] hover:bg-[#333333] text-white rounded-full h-9 w-9"
+            className="absolute top-4 right-4 bg-[#181818] hover:bg-gray-700 text-white rounded-full"
             onClick={onClose}
           >
-            <X className="h-5 w-5" />
+            <X className="h-6 w-6" />
           </Button>
 
-          {/* Hero section with video player styling */}
-          <div className="relative aspect-video bg-black">
-            <Image src={item.image || "/placeholder.svg"} alt={item.title} fill className="object-cover" />
-
-            {/* Video player overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
-
-            {/* Netflix logo and content type */}
-            <div className="absolute top-6 left-6">
-              <div className="flex items-center gap-3">
-                <div className="text-[#E50914] font-bold text-2xl">N</div>
-                <span className="text-white text-sm font-medium tracking-wider">{getContentType()}</span>
-              </div>
+          {/* Netflix logo and content type */}
+          <div className="absolute top-4 left-4 flex items-center space-x-2">
+            <div className="w-6 h-6 bg-[#E50914] rounded flex items-center justify-center">
+              <span className="text-white font-bold text-xs">C</span>
             </div>
-
-            {/* Title and controls */}
-            <div className="absolute bottom-0 left-0 right-0 p-6">
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 max-w-2xl">{item.title}</h1>
-
-              {/* Control buttons */}
-              <div className="flex items-center gap-3">
-                <Button
-                  size="lg"
-                  className="bg-white text-black hover:bg-gray-200 rounded-sm px-8 py-2 font-semibold"
-                  onClick={handlePlayClick}
-                >
-                  <Play className="mr-2 h-5 w-5 fill-current" />
-                  View Details
-                </Button>
-
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  className="bg-[#2A2A2A]/80 hover:bg-[#2A2A2A] text-white rounded-full h-10 w-10 border border-gray-500"
-                >
-                  <Plus className="h-5 w-5" />
-                </Button>
-
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  className="bg-[#2A2A2A]/80 hover:bg-[#2A2A2A] text-white rounded-full h-10 w-10 border border-gray-500"
-                >
-                  <ThumbsUp className="h-5 w-5" />
-                </Button>
-
-                <div className="ml-auto">
-                  <Button
-                    variant="ghost"
-                    size="icon"
-                    className="bg-[#2A2A2A]/80 hover:bg-[#2A2A2A] text-white rounded-full h-10 w-10 border border-gray-500"
-                  >
-                    <Volume2 className="h-5 w-5" />
-                  </Button>
-                </div>
-              </div>
-            </div>
+            <span className="text-white text-sm font-semibold tracking-wider">
+              {item.type?.toUpperCase() || category.toUpperCase()}
+            </span>
           </div>
 
-          {/* Content section */}
-          <div className="p-6">
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-              {/* Main content */}
-              <div className="lg:col-span-2 space-y-4">
-                {/* Metadata row */}
-                <div className="flex items-center gap-4 text-sm">
-                  <span className="text-[#46D369] font-semibold">
-                    {item.duration ? `${getYearFromDuration(item.duration)}` : "2024"}
-                  </span>
+          {/* Bottom content overlay */}
+          <div className="absolute bottom-0 left-0 right-0 p-6">
+            <h1 className="text-white text-3xl md:text-4xl font-bold mb-4">{item.title}</h1>
 
-                  {item.duration && (
-                    <Badge variant="outline" className="border-gray-500 text-gray-300 bg-transparent">
-                      {item.duration}
-                    </Badge>
-                  )}
+            {/* Action buttons */}
+            <div className="flex items-center space-x-4 mb-4">
+              <Button
+                size="lg"
+                className="bg-white text-black hover:bg-gray-200 font-semibold px-8"
+                onClick={handleExternalLink}
+              >
+                <Play className="mr-2 h-5 w-5" />
+                View Details
+              </Button>
+              <Button
+                variant="ghost"
+                size="icon"
+                className="bg-gray-600/50 hover:bg-gray-600/70 text-white rounded-full"
+              >
+                <Plus className="h-6 w-6" />
+              </Button>
+              <Button
+                variant="ghost"
+                size="icon"
+                className="bg-gray-600/50 hover:bg-gray-600/70 text-white rounded-full"
+              >
+                <ThumbsUp className="h-6 w-6" />
+              </Button>
+              <Button
+                variant="ghost"
+                size="icon"
+                className="bg-gray-600/50 hover:bg-gray-600/70 text-white rounded-full"
+              >
+                <Volume2 className="h-6 w-6" />
+              </Button>
+            </div>
+          </div>
+        </div>
 
-                  {item.tech && (
-                    <Badge variant="outline" className="border-gray-500 text-gray-300 bg-transparent">
-                      HD
-                    </Badge>
-                  )}
-                </div>
-
-                {/* Description */}
-                <p className="text-white text-base leading-relaxed">{item.description}</p>
+        {/* Content */}
+        <div className="p-6">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            {/* Main content */}
+            <div className="lg:col-span-2 space-y-4">
+              {/* Metadata */}
+              <div className="flex items-center space-x-4 text-sm">
+                <span className="text-green-500 font-semibold">{new Date().getFullYear()}</span>
+                <span className="text-white">{item.duration}</span>
+                <div className="bg-gray-600 text-white px-2 py-1 text-xs rounded">HD</div>
+                <div className="bg-gray-600 text-white px-2 py-1 text-xs rounded">{item.type || "Professional"}</div>
               </div>
 
-              {/* Sidebar */}
-              <div className="space-y-4 text-sm">
-                {item.company && (
-                  <div>
-                    <span className="text-gray-400">Company: </span>
-                    <span className="text-white">{item.company}</span>
-                  </div>
-                )}
+              {/* Description */}
+              <p className="text-white text-base leading-relaxed">{item.fullDescription}</p>
 
-                {item.publication && (
-                  <div>
-                    <span className="text-gray-400">Publication: </span>
-                    <span className="text-white">{item.publication}</span>
-                  </div>
-                )}
-
-                {item.organization && (
-                  <div>
-                    <span className="text-gray-400">Organization: </span>
-                    <span className="text-white">{item.organization}</span>
-                  </div>
-                )}
-
-                {item.tech && (
-                  <div>
-                    <span className="text-gray-400">Technologies: </span>
-                    <span className="text-white">{item.tech}</span>
-                  </div>
-                )}
-
-                {(item.subscribers || item.members || item.participants || item.downloads) && (
-                  <div>
-                    <span className="text-gray-400">
-                      {item.subscribers
-                        ? "Subscribers"
-                        : item.members
-                          ? "Members"
-                          : item.participants
-                            ? "Participants"
-                            : "Downloads"}
-                      :
-                    </span>
-                    <span className="text-white">
-                      {item.subscribers || item.members || item.participants || item.downloads}
-                    </span>
-                  </div>
-                )}
-
+              {/* Technologies */}
+              {item.technologies && item.technologies.length > 0 && (
                 <div>
-                  <span className="text-gray-400">Category: </span>
-                  <span className="text-white">
-                    {item.category ||
-                      (item.company
-                        ? "Professional Experience"
-                        : item.publication
-                          ? "Content Creation"
-                          : item.organization
-                            ? "Community Involvement"
-                            : "Technology")}
-                  </span>
+                  <h3 className="text-white font-semibold mb-2">Technologies:</h3>
+                  <div className="flex flex-wrap gap-2">
+                    {item.technologies.map((tech, index) => (
+                      <span key={index} className="bg-gray-700 text-gray-300 px-3 py-1 rounded-full text-sm">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
                 </div>
+              )}
+
+              {/* Achievements */}
+              {item.achievements && item.achievements.length > 0 && (
+                <div>
+                  <h3 className="text-white font-semibold mb-2">Key Achievements:</h3>
+                  <ul className="text-gray-300 space-y-1">
+                    {item.achievements.map((achievement, index) => (
+                      <li key={index} className="flex items-start">
+                        <span className="text-green-500 mr-2">•</span>
+                        {achievement}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
+
+            {/* Sidebar */}
+            <div className="space-y-4">
+              {item.company && (
+                <div>
+                  <span className="text-gray-400 text-sm">Company: </span>
+                  <span className="text-white">{item.company}</span>
+                </div>
+              )}
+
+              {item.period && (
+                <div>
+                  <span className="text-gray-400 text-sm">Period: </span>
+                  <span className="text-white">{item.period}</span>
+                </div>
+              )}
+
+              <div>
+                <span className="text-gray-400 text-sm">Category: </span>
+                <span className="text-white capitalize">{category}</span>
+              </div>
+
+              <div>
+                <span className="text-gray-400 text-sm">This project is: </span>
+                <span className="text-white">Professional, Innovative</span>
               </div>
             </div>
           </div>
         </div>
-      </DialogContent>
-    </Dialog>
+      </div>
+    </div>
   )
 }

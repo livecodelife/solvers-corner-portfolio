@@ -1,42 +1,84 @@
 [
   {
-    "id": "work-1",
+    "id": 1,
     "title": "Senior Software Engineer",
+    "subtitle": "GenAI & Platform Engineering",
     "company": "Checkr, Inc.",
-    "image": "/placeholder.svg?height=300&width=500",
-    "blurb": "Leading GenAI adoption and cross-functional programs, unlocking $2M in revenue",
-    "description": "Currently driving GenAI technology adoption across engineering teams while leading critical cross-functional programs. Unlocked $2M in revenue by co-leading crucial time-sensitive efforts. Achieved 56% reduction in expensive customer processes through cross-functional collaboration. Led research, testing, and rollout of AI-powered merge request review agent, resulting in 82% reduction in approval time and 24% reduction in cycle time. Developing critical services handling ~2000 requests per minute and delivering hands-on AI workshops to 150+ engineers.",
-    "duration": "December 2021 - Present",
-    "externalLink": "https://checkr.com"
+    "period": "12/2021 - Present",
+    "image": "/placeholder.svg?height=400&width=600",
+    "description": "Leading GenAI adoption and cross-functional engineering initiatives",
+    "fullDescription": "Unlocked $2M in revenue by co-leading crucial time-sensitive efforts and stepping in for the lead engineer. Achieved 56% reduction in expensive and time-consuming customer processes by spearheading cross-functional collaboration. Led, researched, tested, and rolled out an AI-powered merge request review agent, partnering with engineering and DevOps teams to integrate it into the CI pipeline.",
+    "technologies": ["Ruby on Rails", "React", "Docker", "Kubernetes", "GenAI", "LLMs"],
+    "achievements": [
+      "Unlocked $2M in revenue through critical engineering leadership",
+      "Achieved 56% reduction in customer process time",
+      "Implemented GenAI pilot with 82% reduction in approval time and 24% reduction in cycle time",
+      "Developed services handling ~2000 requests per minute",
+      "Delivered hands-on workshops to 150+ engineers on AI agent best practices"
+    ],
+    "externalLink": "https://checkr.com",
+    "duration": "2+ years",
+    "type": "Full-time"
   },
   {
-    "id": "work-2",
+    "id": 2,
     "title": "Senior Consultant",
+    "subtitle": "Multi-team Technical Leadership",
     "company": "Object Partners, Inc.",
-    "image": "/placeholder.svg?height=300&width=500",
-    "blurb": "Managed multi-team delivery across Java/Spring and React teams for three client organizations",
-    "description": "Orchestrated Java/Spring and React development teams across three client organizations, breaking down complex requirements into sprint-based technical plans with clear milestones. Consulted directly with clients to determine project requirements, provided strategic technical guidance, and delivered architected solutions that met critical business objectives. Specialized in cross-team coordination and technical leadership.",
-    "duration": "August 2020 - December 2021",
-    "externalLink": "https://objectpartners.com"
+    "period": "08/2020 - 12/2021",
+    "image": "/placeholder.svg?height=400&width=600",
+    "description": "Managed multi-team delivery across Java/Spring and React teams",
+    "fullDescription": "Managed multi-team delivery by orchestrating Java/Spring and React teams across three client organizations, breaking down requirements into sprint-based technical plans with clear milestones. Consulted and collaborated with clients to determine project requirements, provide technical guidance, and deliver or architect solutions that met their business objectives.",
+    "technologies": ["Java", "Spring Boot", "React", "JavaScript", "Agile"],
+    "achievements": [
+      "Successfully managed delivery across 3 client organizations",
+      "Orchestrated Java/Spring and React development teams",
+      "Delivered sprint-based technical solutions with clear milestones",
+      "Provided strategic technical guidance to enterprise clients"
+    ],
+    "externalLink": "https://objectpartners.com",
+    "duration": "1.3 years",
+    "type": "Consulting"
   },
   {
-    "id": "work-3",
+    "id": 3,
     "title": "Senior Software Engineer",
+    "subtitle": "Enterprise Web Applications",
     "company": "Cognizant",
-    "image": "/placeholder.svg?height=300&width=500",
-    "blurb": "Developed scalable web applications using Java and Spring Boot for major trucking company",
-    "description": "Developed and maintained scalable web applications using Java and Spring Boot framework for a major trucking company's payroll system. Mentored junior engineers, provided high-level code reviews, and conducted technical interviews. Focused on building robust, enterprise-level solutions that could handle high-volume transaction processing.",
-    "duration": "April 2019 - August 2020",
-    "externalLink": "https://cognizant.com"
+    "period": "04/2019 - 08/2020",
+    "image": "/placeholder.svg?height=400&width=600",
+    "description": "Developed scalable web applications for major trucking company payroll systems",
+    "fullDescription": "Developed and maintained scalable web applications using Java and Spring Boot framework for a major trucking company's payroll system. Mentored junior engineers, provided high-level code review, and conducted technical interviews to build strong engineering teams.",
+    "technologies": ["Java", "Spring Boot", "Microservices", "REST APIs"],
+    "achievements": [
+      "Built scalable payroll systems for major trucking company",
+      "Mentored junior engineers and conducted technical interviews",
+      "Provided high-level code review and architectural guidance",
+      "Maintained enterprise-grade web applications"
+    ],
+    "externalLink": "https://cognizant.com",
+    "duration": "1.3 years",
+    "type": "Full-time"
   },
   {
-    "id": "work-4",
+    "id": 4,
     "title": "Software Engineer",
+    "subtitle": "Full-Stack Development & Team Leadership",
     "company": "Allstate",
-    "image": "/placeholder.svg?height=300&width=500",
-    "blurb": "Led full-stack development for insurance claims system as tech lead for team of 7 engineers",
-    "description": "Led development on a full-stack web application for insurance claims processing as tech lead for a team of 7 engineers. Architected and led an innovative image quality scoring system using WebRTC for capturing vehicle damage images. Developed a Node.js package with React components for WebRTC video capturing (currently ~21 downloads per month). Engineered the migration of legacy systems to modern email services and led GraphQL implementation for enhanced API functionality.",
-    "duration": "June 2017 - April 2019",
-    "externalLink": "https://allstate.com"
+    "period": "06/2017 - 04/2019",
+    "image": "/placeholder.svg?height=400&width=600",
+    "description": "Led development on full-stack insurance claims application as tech lead",
+    "fullDescription": "Led development on a full-stack web application for insurance claims as tech lead for a team of 7 engineers. Architected and led an image quality scoring system for WebRTC vehicle damage capture. Developed a Node package exposing WebRTC functions and React components, currently with ~21 downloads per month. Engineered migration of legacy system to modern email service and led GraphQL implementation.",
+    "technologies": ["JavaScript", "React", "Node.js", "WebRTC", "GraphQL"],
+    "achievements": [
+      "Tech lead for team of 7 engineers on insurance claims application",
+      "Architected image quality scoring system for vehicle damage assessment",
+      "Created open-source WebRTC Node package with ongoing usage",
+      "Led legacy system migration to modern email service",
+      "Implemented GraphQL for enhanced API functionality"
+    ],
+    "externalLink": "https://allstate.com",
+    "duration": "1.8 years",
+    "type": "Full-time"
   }
 ]
