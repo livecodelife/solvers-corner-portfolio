@@ -1,82 +1,37 @@
 [
   {
     "id": 1,
-    "title": "AI-Powered Code Review Agent",
-    "subtitle": "82% reduction in approval time, 24% reduction in cycle time",
-    "company": "Checkr, Inc.",
-    "period": "2024",
-    "image": "/placeholder.svg?height=400&width=600",
-    "description": "Led research, testing, and rollout of AI-powered merge request review system",
-    "fullDescription": "Led the complete lifecycle of implementing an AI-powered merge request review agent, from initial research through production deployment. Partnered cross-functionally with engineering and DevOps teams to integrate the system into the CI pipeline. The implementation resulted in an 82% reduction in time to approve and a 24% reduction in overall cycle time, significantly improving developer productivity.",
-    "technologies": ["AI/ML", "CI/CD", "DevOps", "Code Review", "Automation"],
+    "title": "Flip The Choice",
+    "subtitle": "Fun app for making decisions",
+    "period": "2025",
+    "category": "Projects",
+    "image": "/flip.png?height=400&width=600",
+    "description": "Fun, Simple",
+    "fullDescription": "Generated a choice app for a Choose Your Own Adventure experience on Mother's Day for my wife. Created in 10 minutes with Lovable",
+    "technologies": ["AI", "Javascript", "Lovable", "Automation"],
     "achievements": [
-      "82% reduction in merge request approval time",
-      "24% reduction in overall development cycle time",
-      "Seamless integration with existing CI pipeline",
-      "Cross-functional collaboration with engineering and DevOps"
+      "A fun Mother's Day for my wife",
+      "A reusable application for decision making"
     ],
-    "externalLink": "https://checkr.com/engineering/ai-code-review",
-    "duration": "6 months",
-    "type": "AI/ML"
+    "externalLink": "https://flip-the-choice-game.lovable.app",
+    "type": "project"
   },
   {
     "id": 2,
-    "title": "High-Volume Request Processing System",
-    "subtitle": "Critical services handling ~2000 requests per minute",
-    "company": "Checkr, Inc.",
-    "period": "2022-2024",
-    "image": "/placeholder.svg?height=400&width=600",
-    "description": "Developed and maintained critical services for high-traffic applications",
-    "fullDescription": "Developed and maintained critical services handling approximately 2000 requests per minute, ensuring high availability and performance for mission-critical applications. Implemented robust monitoring, error handling, and scaling strategies to maintain service reliability under heavy load.",
-    "technologies": ["Ruby on Rails", "Microservices", "Load Balancing", "Monitoring", "Performance Optimization"],
+    "title": "WebRTC Quickstream",
+    "subtitle": "A Node package for streamlining the use of WebRTC in React applications",
+    "company": "npm.js",
+    "period": "2021",
+    "category": "Projects",
+    "image": "/npm.png?height=400&width=600",
+    "description": "Reliable, Streamlined",
+    "fullDescription": "WebRTC Quickstream is a package to help create a WebRTC Media Stream and attach it to a video element easily. WebRTC Quickstream handles the various checks that need to be done to run getUserMedia on all browsers.",
+    "technologies": ["WebRTC", "Image Processing", "JavaScript"],
     "achievements": [
-      "Maintained 99.9% uptime for critical services",
-      "Handled ~2000 requests per minute consistently",
-      "Implemented comprehensive monitoring and alerting",
-      "Optimized performance for high-traffic scenarios"
+      "21 downloads per month",
+      "Seamless integration with WebRTC video capture"
     ],
-    "externalLink": "https://checkr.com/platform",
-    "duration": "2 years",
-    "type": "Backend"
-  },
-  {
-    "id": 3,
-    "title": "WebRTC Image Quality Scoring System",
-    "subtitle": "Vehicle damage assessment with real-time image analysis",
-    "company": "Allstate",
-    "period": "2018-2019",
-    "image": "/placeholder.svg?height=400&width=600",
-    "description": "Architected and led development of image quality scoring for vehicle damage capture",
-    "fullDescription": "Architected and led the development of an innovative image quality scoring system used in conjunction with WebRTC for capturing vehicle damage images. The system provided real-time feedback to users about image quality, ensuring high-quality data collection for insurance claims processing. This project significantly improved the accuracy and efficiency of damage assessment workflows.",
-    "technologies": ["WebRTC", "Image Processing", "JavaScript", "Real-time Systems", "Computer Vision"],
-    "achievements": [
-      "Real-time image quality assessment for insurance claims",
-      "Improved accuracy of vehicle damage documentation",
-      "Seamless integration with WebRTC video capture",
-      "Enhanced user experience with immediate feedback"
-    ],
-    "externalLink": "https://allstate.com/claims",
-    "duration": "8 months",
-    "type": "Frontend"
-  },
-  {
-    "id": 4,
-    "title": "Legacy System Migration & GraphQL Implementation",
-    "subtitle": "Modern email service with enhanced API functionality",
-    "company": "Allstate",
-    "period": "2017-2018",
-    "image": "/placeholder.svg?height=400&width=600",
-    "description": "Engineered migration from legacy system to modern email service with GraphQL",
-    "fullDescription": "Engineered the complete migration of a legacy email system to a modern, scalable email service. Led the implementation of GraphQL to enhance API functionality, providing more flexible and efficient data querying capabilities. The project improved system maintainability, performance, and developer experience while maintaining backward compatibility during the transition.",
-    "technologies": ["GraphQL", "System Migration", "Email Services", "API Design", "Legacy Modernization"],
-    "achievements": [
-      "Successfully migrated legacy email system without downtime",
-      "Implemented GraphQL for enhanced API functionality",
-      "Improved system performance and maintainability",
-      "Maintained backward compatibility during transition"
-    ],
-    "externalLink": "https://allstate.com/platform",
-    "duration": "10 months",
-    "type": "Full-stack"
+    "externalLink": "https://www.npmjs.com/package/webrtc-quickstream",
+    "type": "project"
   }
 ]
