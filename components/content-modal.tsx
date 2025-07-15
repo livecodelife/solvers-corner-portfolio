@@ -16,24 +16,74 @@ interface ContentModalProps {
 }
 
 export default function ContentModal({ item, onClose, category }: ContentModalProps) {
-  useEffect(() => {
-    const handleEscape = (e: KeyboardEvent) => {
-      if (e.key === "Escape") {
-        onClose()
-      }
+useEffect(() => {
+  const handleEscape = (e: KeyboardEvent) => {
+    if (e.key === "Escape") {
+      onClose()
     }
+  }
 
-    document.addEventListener("keydown", handleEscape)
-    document.body.style.overflow = "hidden"
+  const handleTouchStart = (e: TouchEvent) => {
+    // Store touch start position for swipe detection
+    const touch = e.touches[0]
+    ;(e.target as HTMLElement).dataset.touchStartX = touch.clientX.toString()
+    ;(e.target as HTMLElement).dataset.touchStartY = touch.clientY.toString()
+  }
 
-    return () => {
-      document.removeEventListener("keydown", handleEscape)
-      document.body.style.overflow = "unset"
+  const handleTouchEnd = (e: TouchEvent) => {
+    // Detect swipe down gesture to close modal
+    const touchStartX = parseFloat((e.target as HTMLElement).dataset.touchStartX || '0')
+    const touchStartY = parseFloat((e.target as HTMLElement).dataset.touchStartY || '0')
+    const touchEndX = e.changedTouches[0].clientX
+    const touchEndY = e.changedTouches[0].clientY
+    
+    const deltaX = touchEndX - touchStartX
+    const deltaY = touchEndY - touchStartY
+    
+    // Close on swipe down (at least 50px swipe down)
+    if (deltaY > 50 && Math.abs(deltaX) < 30) {
+      onClose()
     }
-  }, [onClose])
+  }
+
+  document.addEventListener("keydown", handleEscape)
+  document.addEventListener("touchstart", handleTouchStart)
+  document.addEventListener("touchend", handleTouchEnd)
+  document.body.style.overflow = "hidden"
+
+  return () => {
+    document.removeEventListener("keydown", handleEscape)
+    document.removeEventListener("touchstart", handleTouchStart)
+    document.removeEventListener("touchend", handleTouchEnd)
+    document.body.style.overflow = "unset"
+  }
+}, [onClose])
 
   const handleBackdropClick = (e: React.MouseEvent) => {
     if (e.target === e.currentTarget) {
+      onClose()
+    }
+  }
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    // Store touch start position for swipe detection
+    const touch = e.touches[0]
+    ;(e.currentTarget as HTMLElement).dataset.touchStartX = touch.clientX.toString()
+    ;(e.currentTarget as HTMLElement).dataset.touchStartY = touch.clientY.toString()
+  }
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    // Detect swipe down gesture to close modal
+    const touchStartX = parseFloat((e.currentTarget as HTMLElement).dataset.touchStartX || '0')
+    const touchStartY = parseFloat((e.currentTarget as HTMLElement).dataset.touchStartY || '0')
+    const touchEndX = e.changedTouches[0].clientX
+    const touchEndY = e.changedTouches[0].clientY
+    
+    const deltaX = touchEndX - touchStartX
+    const deltaY = touchEndY - touchStartY
+    
+    // Close on swipe down (at least 50px swipe down)
+    if (deltaY > 50 && Math.abs(deltaX) < 30) {
       onClose()
     }
   }
@@ -45,8 +95,17 @@ export default function ContentModal({ item, onClose, category }: ContentModalPr
   }
 
   return (
-    <div className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4" onClick={handleBackdropClick}>
-      <div className="bg-[#181818] rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+    <div
+      className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4"
+      onClick={handleBackdropClick}
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
+    >
+      <div
+        className="bg-[#181818] rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto"
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
+      >
         {/* Header with video/image */}
         <div className="relative aspect-video">
           <Image
@@ -66,6 +125,10 @@ export default function ContentModal({ item, onClose, category }: ContentModalPr
             size="icon"
             className="absolute top-4 right-4 bg-[#181818] hover:bg-gray-700 text-white rounded-full"
             onClick={onClose}
+            onTouchEnd={(e) => {
+              e.stopPropagation()
+              onClose()
+            }}
             data-umami-event="modal-close"
           >
             <X className="h-6 w-6" />
