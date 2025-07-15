@@ -36,14 +36,12 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
 
   return (
     <div
-      className={`fixed inset-0 bg-black z-50 flex items-center justify-center overflow-hidden transition-opacity duration-300 ${
-        animationPhase === "fade" ? "opacity-0" : "opacity-100"
-      }`}
+      className={'fixed inset-0 bg-black z-50 flex items-center justify-center overflow-hidden'}
     >
       <div className="relative flex items-center justify-center">
         {/* SOLVERS text */}
         <div
-          className={`text-red-600 font-bold text-4xl sm:text-6xl md:text-8xl lg:text-9xl tracking-wider transition-all duration-10000 ease-in-out ${
+          className={`text-red-600 font-bebas-neue text-4xl sm:text-6xl md:text-8xl lg:text-9xl tracking-wider transition-all duration-10000 ease-in-out ${
             animationPhase === "initial"
               ? "transform translate-x-0 scale-100 opacity-100"
               : "transform translate-x-[200px] scale-0 opacity-0"
@@ -58,13 +56,13 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
         {/* Space between SOLVERS and CORNER */}
         <div
           className={`transition-all duration-10000 ease-in-out ${
-            animationPhase === "collapse" ? "w-0" : "w-8 sm:w-12 md:w-16 lg:w-20"
+            animationPhase === "collapse" ? "w-0" : "w-5 sm:w-10 md:w-12 lg:w-15"
           }`}
         ></div>
 
         {/* C letter that the others collapse into and centers */}
         <div
-          className={`text-red-600 font-bold text-4xl sm:text-6xl md:text-8xl lg:text-9xl tracking-wider transition-all duration-2000 ease-in-out ${
+          className={`text-red-600 font-bebas-neue text-4xl sm:text-6xl md:text-8xl lg:text-9xl tracking-wider transition-all duration-2000 ease-in-out ${
             animationPhase === "rush"
               ? "transform translate-x-0 scale-[20] opacity-0"
               : animationPhase === "initial"
@@ -82,7 +80,7 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
 
         {/* ORNER text */}
         <div
-          className={`text-red-600 font-bold text-4xl sm:text-6xl md:text-8xl lg:text-9xl tracking-wider transition-all duration-10000 ease-in-out ${
+          className={`text-red-600 font-bebas-neue text-4xl sm:text-6xl md:text-8xl lg:text-9xl tracking-wider transition-all duration-10000 ease-in-out ${
             animationPhase === "initial"
               ? "transform translate-x-0 scale-100 opacity-100"
               : "transform translate-x-[-200px] scale-0 opacity-0"

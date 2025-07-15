@@ -1,10 +1,11 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
+import { Inter, Bebas_Neue } from "next/font/google"
 import Script from "next/script"
 import "./globals.css"
 
 const inter = Inter({ subsets: ["latin"] })
+const bebasNeue = Bebas_Neue({ subsets: ["latin"], weight: ["400"], variable: "--font-bebas-neue" })
 
 export const metadata: Metadata = {
   title: "The Solvers Corner - Caleb Cowen",
@@ -27,7 +28,7 @@ export default function RootLayout({
           strategy="afterInteractive"
         />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={`${inter.className} ${bebasNeue.variable}`}>{children}</body>
     </html>
   )
 }
