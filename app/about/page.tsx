@@ -1,14 +1,26 @@
-import { Metadata } from "next"
+"use client"
+
 import { Button } from "@/components/ui/button"
 import { ArrowLeft, Code, Database, Cloud, Users, Heart, BookOpen, Gamepad2 } from "lucide-react"
 import Link from "next/link"
-
-export const metadata: Metadata = {
-  title: "About Caleb - The Solvers Corner",
-  description: "Learn about Caleb Cowen's 8+ years of experience in GenAI technology, cross-functional leadership, and scalable engineering solutions.",
-}
+import { useEffect } from "react"
+import { trackPageNavigation } from "@/lib/analytics"
 
 export default function AboutPage() {
+  useEffect(() => {
+    trackPageNavigation({
+      to: '/about',
+      from: typeof window !== 'undefined' ? window.location.pathname : undefined
+    })
+  }, [])
+
+  const handleBackToHome = () => {
+    trackPageNavigation({
+      from: '/about',
+      to: '/'
+    })
+  }
+
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Hero Section */}
@@ -162,7 +174,7 @@ trucking company&apos;s payroll system.
 
         {/* Back to Home Button */}
         <div className="flex justify-center">
-          <Link href="/" data-umami-event="back-to-home-click">
+          <Link href="/" onClick={handleBackToHome}>
             <Button
               size="lg"
               className="bg-white text-black hover:bg-gray-200"

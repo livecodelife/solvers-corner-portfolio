@@ -21,7 +21,7 @@ export default function ContentCard({ item, onClick }: ContentCardProps) {
   const [imageError, setImageError] = useState(false)
 
   return (
-    <div className="group cursor-pointer transition-all duration-300 hover:scale-105" onClick={onClick} data-umami-event="content-card-click">
+    <div className="group cursor-pointer transition-all duration-300 hover:scale-105" onClick={onClick} >
       <div className="relative aspect-video rounded-lg overflow-hidden bg-gray-800">
         {!imageError ? (
           <Image

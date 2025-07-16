@@ -4,6 +4,7 @@ import { useRef } from "react"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import ContentCard from "./content-card"
+import { trackCarouselNavigation, trackContentCardClick } from "@/lib/analytics"
 
 import type { ContentItem } from "@/types/content"
 
@@ -23,6 +24,12 @@ export default function ContentCarousel({ title, items, onItemClick }: ContentCa
         left: direction === "left" ? -scrollAmount : scrollAmount,
         behavior: "smooth",
       })
+      
+      // Track carousel navigation
+      trackCarouselNavigation({
+        direction: direction === "left" ? "previous" : "next",
+        category: title,
+      })
     }
   }
 
@@ -37,7 +44,6 @@ export default function ContentCarousel({ title, items, onItemClick }: ContentCa
           size="icon"
           className="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black/70 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
           onClick={() => scroll("left")}
-          data-umami-event="carousel-scroll-left"
         >
           <ChevronLeft className="h-6 w-6" />
         </Button>
@@ -48,7 +54,6 @@ export default function ContentCarousel({ title, items, onItemClick }: ContentCa
           size="icon"
           className="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black/70 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
           onClick={() => scroll("right")}
-          data-umami-event="carousel-scroll-right"
         >
           <ChevronRight className="h-6 w-6" />
         </Button>
@@ -61,8 +66,18 @@ export default function ContentCarousel({ title, items, onItemClick }: ContentCa
         >
           {items.map((item) => (
             <div key={item.id} className="flex-none w-[280px] sm:w-[320px] md:w-[280px] lg:w-[320px]">
-              <ContentCard item={item} onClick={() => onItemClick(item)} />
-            </div>
+                <ContentCard
+                  item={item}
+                  onClick={() => {
+                    // Track content card click
+                    trackContentCardClick({
+                      category: title,
+                      itemTitle: item.title,
+                    })
+                    onItemClick(item)
+                  }}
+                />
+              </div>
           ))}
         </div>
       </div>

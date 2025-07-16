@@ -7,6 +7,7 @@ import { X, Play } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 
+import { track } from "@/lib/analytics"
 import type { ContentItem } from "@/types/content"
 
 interface ContentModalProps {
@@ -17,8 +18,20 @@ interface ContentModalProps {
 
 export default function ContentModal({ item, onClose, category }: ContentModalProps) {
 useEffect(() => {
+  // Track modal opening
+  track('modal_interaction', {
+    action: 'open',
+    item_title: item.title,
+    category: category
+  })
+
   const handleEscape = (e: KeyboardEvent) => {
     if (e.key === "Escape") {
+      track('modal_interaction', {
+        action: 'close_escape',
+        item_title: item.title,
+        category: category
+      })
       onClose()
     }
   }
@@ -42,6 +55,11 @@ useEffect(() => {
     
     // Close on swipe down (at least 50px swipe down)
     if (deltaY > 50 && Math.abs(deltaX) < 30) {
+      track('modal_interaction', {
+        action: 'close_swipe',
+        item_title: item.title,
+        category: category
+      })
       onClose()
     }
   }
@@ -57,10 +75,15 @@ useEffect(() => {
     document.removeEventListener("touchend", handleTouchEnd)
     document.body.style.overflow = "unset"
   }
-}, [onClose])
+}, [onClose, item.title, category])
 
   const handleBackdropClick = (e: React.MouseEvent) => {
     if (e.target === e.currentTarget) {
+      track('modal_interaction', {
+        action: 'close_backdrop',
+        item_title: item.title,
+        category: category
+      })
       onClose()
     }
   }
@@ -90,6 +113,11 @@ useEffect(() => {
 
   const handleExternalLink = () => {
     if (item.externalLink) {
+      track('modal_interaction', {
+        action: 'external_link',
+        item_title: item.title,
+        category: category
+      })
       window.open(item.externalLink, "_blank", "noopener,noreferrer")
     }
   }
@@ -124,12 +152,23 @@ useEffect(() => {
             variant="ghost"
             size="icon"
             className="absolute top-4 right-4 bg-[#181818] hover:bg-gray-700 text-white rounded-full"
-            onClick={onClose}
-            onTouchEnd={(e) => {
-              e.stopPropagation()
+            onClick={() => {
+              track('modal_interaction', {
+                action: 'close_button',
+                item_title: item.title,
+                category: category
+              })
               onClose()
             }}
-            data-umami-event="modal-close"
+            onTouchEnd={(e) => {
+              e.stopPropagation()
+              track('modal_interaction', {
+                action: 'close_button',
+                item_title: item.title,
+                category: category
+              })
+              onClose()
+            }}
           >
             <X className="h-6 w-6" />
           </Button>
@@ -151,7 +190,6 @@ useEffect(() => {
                 size="lg"
                 className="bg-white text-black hover:bg-gray-200 font-semibold px-5"
                 onClick={handleExternalLink}
-                data-umami-event="external-link-click"
               >
                 <Play className="h-5 w-5" />
               </Button>

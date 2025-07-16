@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
+import { trackSplashScreenCompletion } from "@/lib/analytics"
 
 interface SplashScreenProps {
   onComplete: () => void
@@ -23,6 +24,7 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
     }, 3500)
 
     const timer4 = setTimeout(() => {
+      trackSplashScreenCompletion({ duration: 4500 })
       onComplete()
     }, 4500)
 

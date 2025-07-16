@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import HeroBanner from "@/components/hero-banner"
 import ContentCarousel from "@/components/content-carousel"
 import ContentModal from "@/components/content-modal"
@@ -12,21 +12,54 @@ import newsletterData from "@/data/newsletter.json"
 import communityData from "@/data/community.json"
 import projectsData from "@/data/projects.json"
 
+// Import analytics
+import {
+  trackContentCardClick,
+  trackModalInteraction,
+  trackSplashScreenCompletion
+} from "@/lib/analytics"
+
 import type { ContentItem } from "@/types/content"
 
 export default function Home() {
   const [selectedItem, setSelectedItem] = useState<ContentItem | null>(null)
   const [showSplash, setShowSplash] = useState(true)
 
+  // Track page load
+  useEffect(() => {
+    if (!showSplash) {
+      // Only track page load after splash screen is completed
+      trackContentCardClick({
+        category: 'page',
+        itemTitle: 'home_page_loaded'
+      })
+    }
+  }, [showSplash])
+
   const handleItemClick = (item: ContentItem) => {
     setSelectedItem(item)
+    // Track content item click
+    trackContentCardClick({
+      category: item.category || 'general',
+      itemTitle: item.title
+    })
   }
 
   const handleCloseModal = () => {
+    if (selectedItem) {
+      // Track modal close event
+      trackModalInteraction({
+        actionType: 'close',
+        itemTitle: selectedItem.title,
+        category: selectedItem.category || 'general'
+      })
+    }
     setSelectedItem(null)
   }
 
   const handleSplashComplete = () => {
+    // Track splash screen completion
+    trackSplashScreenCompletion({ duration: 0 }) // Duration can be calculated if needed
     setShowSplash(false)
   }
 

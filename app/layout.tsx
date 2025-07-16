@@ -1,7 +1,7 @@
 import type React from "react"
 import type { Metadata } from "next"
 import { Inter, Bebas_Neue } from "next/font/google"
-import Script from "next/script"
+import AnalyticsWrapper from "@/components/AnalyticsWrapper"
 import "./globals.css"
 
 const inter = Inter({ subsets: ["latin"] })
@@ -22,13 +22,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <Script
-          src="http://localhost:3000/script.js"
-          data-website-id="c8748051-d1ec-4034-bd59-a23bd4e8dfb1"
-          strategy="afterInteractive"
-        />
       </head>
-      <body className={`${inter.className} ${bebasNeue.variable}`}>{children}</body>
+      <body className={`${inter.className} ${bebasNeue.variable}`}>
+        {children}
+        <AnalyticsWrapper />
+      </body>
     </html>
   )
 }

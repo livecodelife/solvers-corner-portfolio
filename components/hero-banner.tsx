@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react"
 import { useRouter } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Play, Info, VolumeX, Volume2 } from "lucide-react"
+import { trackVideoControl, trackHeroButtonClick } from "@/lib/analytics"
 
 const GRADIENT_OVERLAYS = [
   "bg-gradient-to-r from-black/70 via-black/30 to-transparent",
@@ -19,10 +20,15 @@ export default function HeroBanner() {
     if (videoRef.current) {
       videoRef.current.muted = !isMuted
       setIsMuted(!isMuted)
+      trackVideoControl({ action: isMuted ? 'unmute' : 'mute' })
     }
   }
 
   const handleAboutClick = () => {
+    trackHeroButtonClick({
+      buttonType: 'about_me',
+      destination: '/about'
+    })
     router.push('/about')
   }
 
@@ -58,7 +64,6 @@ export default function HeroBanner() {
         onClick={toggleMute}
         className="absolute top-4 right-4 z-10 p-2 rounded-full bg-black/50 hover:bg-black/70 transition-colors"
         aria-label={isMuted ? "Unmute video" : "Mute video"}
-        data-umami-event="video-mute-toggle"
       >
         {isMuted ? <VolumeX className="h-6 w-6 text-white" /> : <Volume2 className="h-6 w-6 text-white" />}
       </button>
@@ -73,8 +78,17 @@ export default function HeroBanner() {
               cross-functional leadership, and scalable engineering solutions that drive real business impact.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto">
-              <a href="https://github.com/livecodelife" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
-                <Button size="lg" className="bg-white text-black hover:bg-gray-200 w-full sm:w-auto" data-umami-event="explore-work-click">
+              <a
+                href="https://github.com/livecodelife"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto"
+                onClick={() => trackHeroButtonClick({
+                  buttonType: 'explore_work',
+                  destination: 'https://github.com/livecodelife'
+                })}
+              >
+                <Button size="lg" className="bg-white text-black hover:bg-gray-200 w-full sm:w-auto" >
                   <Play className="mr-2 h-5 w-5" />
                   Explore My Work
                 </Button>
@@ -84,7 +98,6 @@ export default function HeroBanner() {
                 variant="outline"
                 className="border-gray-400 text-white hover:bg-white/10 bg-transparent w-full sm:w-auto"
                 onClick={handleAboutClick}
-                data-umami-event="about-me-click"
               >
                 <Info className="mr-2 h-5 w-5" />
                 About Me
