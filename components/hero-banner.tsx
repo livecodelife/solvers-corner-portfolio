@@ -5,6 +5,11 @@ import { useRouter } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Play, Info, VolumeX, Volume2 } from "lucide-react"
 
+const GRADIENT_OVERLAYS = [
+  "bg-gradient-to-r from-black/70 via-black/30 to-transparent",
+  "bg-gradient-to-t from-black/50 via-transparent to-transparent"
+]
+
 export default function HeroBanner() {
   const videoRef = useRef<HTMLVideoElement>(null)
   const [isMuted, setIsMuted] = useState(true)
@@ -41,10 +46,7 @@ export default function HeroBanner() {
       </video>
 
       {/* Gradient overlays */}
-      {[
-        "bg-gradient-to-r from-black/70 via-black/30 to-transparent",
-        "bg-gradient-to-t from-black/50 via-transparent to-transparent"
-      ].map((gradientClass, index) => (
+      {GRADIENT_OVERLAYS.map((gradientClass, index) => (
         <div
           key={index}
           className={`absolute inset-0 ${gradientClass}`}
