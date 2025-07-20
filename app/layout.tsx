@@ -1,7 +1,7 @@
 import type React from "react"
 import type { Metadata } from "next"
 import { Inter, Bebas_Neue } from "next/font/google"
-import AnalyticsWrapper from "@/components/AnalyticsWrapper"
+import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 
 const inter = Inter({ subsets: ["latin"] })
@@ -25,7 +25,7 @@ export default function RootLayout({
       </head>
       <body className={`${inter.className} ${bebasNeue.variable}`}>
         {children}
-        <AnalyticsWrapper />
+        <Analytics />
       </body>
     </html>
   )
